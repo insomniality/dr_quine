@@ -58,7 +58,9 @@ clean:
 	@echo "C Clean \033[33mok\033[0m"
 
 fclean: clean
-	@rm -f $(NAME1) $(NAME2) $(NAME3)
+	# @rm -f $(NAME1) $(NAME2) $(NAME3)
+	@find . -type f ! \( -name 'Grace.c' -o -name 'Sully.c' -o -name 'Colleen.c' -o -name 'Makefile' \) -delete
+	@find . -type d -empty -exec rmdir {} \;
 	@echo "C Fclean \033[33mok\033[0m"
 
 re: fclean all
