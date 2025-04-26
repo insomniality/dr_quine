@@ -6,7 +6,7 @@
 
 int main(void)
 {
-	int i = 5;
+	int i = 2;
 	if (i <= 0) return (0);
 	char current_file[100];
 	sprintf(current_file, "Sully_%d.c", i);
